@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  test-runner:
+    image: rest-assured-apis:latest
+    restart: always
+    environment:
+      - TESTSUITE=${TESTSUITE}
+    volumes:
+      - /Users/anil/testResults:/usr/share/myapp/test-output
+      - /Users/anil/testReports:/usr/share/myapp/test-reports
